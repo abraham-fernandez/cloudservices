@@ -9,13 +9,14 @@ def getPercentage(numServices):
 def calculatePrice(selection, priceLicense):
     total = 0
     numServices = len(selection)
-    numLicences = np.sum(selection)
-    combinations = []
+    numLicences = sum(selection.values())
+    combinations = {}
+
 
     combinations[numServices] = (numLicences // numServices)
     combinations[numLicences % numServices] = 1
 
-    for numLicense, repetitions in enumerate(combinations):
-        total += repetitions * ((numLicense * priceLicense) * (1 - getPercentage(numLicense)))
+    for repetitions,numLicense in enumerate(combinations):
+        total += combinations[numLicense] * ((numLicense * priceLicense) * (1 - getPercentage(numLicense)))
 
     return total
