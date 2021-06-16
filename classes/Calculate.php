@@ -33,7 +33,7 @@ class Calculate
 
         $total=0;
         foreach ($combinations as $numLicense=>$repetitions){
-            $total+=$repetitions*(($numLicense*$priceLicense)*1-self::getPercentage($numLicense));
+            $total+=$repetitions*(($numLicense*$priceLicense)*(1-self::getPercentage($numLicense)));
 
         }
 
