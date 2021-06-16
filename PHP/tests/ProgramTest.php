@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 class ProgramTest extends TestCase
 {
 
-    public function testCalculatePrice()
+    public function testGetPercentage()
     {
 
         $this->assertEquals(0.05, Calculate::getPercentage(2));
@@ -21,14 +21,14 @@ class ProgramTest extends TestCase
         $this->assertEquals(0.35, Calculate::getPercentage(7));
     }
 
-    public function testGetPercentage()
+    public function testCalculatePrice()
     {
         $selection = ["Service1" => 1, "Service2" => 2, "Service3" => 2, "Service4" => 2, "Service5" => 2, "Service6" => 1];
         $actual = Calculate::calculatePrice($selection, 8);
         $this->assertEquals(60.80, $actual);
     }
 
-    public function testGetPercentageOtherCombination()
+    public function testCalculatePriceOtherCombination()
     {
         $selection = ["Service1" => 2, "Service2" => 2, "Service3" => 2, "Service4" => 2, "Service5" => 2];
         $actual = Calculate::calculatePrice($selection, 8);
