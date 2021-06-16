@@ -26,6 +26,12 @@ class ProgramTest extends TestCase
         $selection = ["Service1" => 1, "Service2" => 2, "Service3" => 2, "Service4" => 2, "Service5" => 2, "Service6" => 1];
         $actual = Calculate::calculatePrice($selection, 8);
         $this->assertEquals(60.80, $actual);
+    }
 
+    public function testGetPercentageOtherCombination()
+    {
+        $selection = ["Service1" => 2, "Service2" => 2, "Service3" => 2, "Service4" => 2, "Service5" => 2];
+        $actual = Calculate::calculatePrice($selection, 8);
+        $this->assertEquals(60, $actual);
     }
 }
