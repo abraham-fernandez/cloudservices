@@ -1,1 +1,1 @@
-{"version":1,"defects":{"ProgramTest::testGetPercentage":4,"tests\\ProgramTest::testGetPercentage":5},"times":{"ProgramTest::testGetPercentage":0.002,"tests\\ProgramTest::testGetPercentage":0.001}}
+{"version":1,"defects":{"ProgramTest::testGetPercentage":4,"tests\\ProgramTest::testGetPercentage":3},"times":{"ProgramTest::testGetPercentage":0.002,"tests\\ProgramTest::testGetPercentage":0.001}}

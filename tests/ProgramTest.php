@@ -15,10 +15,11 @@ class ProgramTest extends TestCase
 
     public function testGetPercentage()
     {
-        $selection=["Service1"=>1,"Service2"=>2];
+        $selection=["Service1"=>1,"Service2"=>2,"Service3"=>2,"Service4"=>2,"Service5"=>2,"Service6"=>1];
+        $expected=[6=>1,4=>1];
 
         $actual=Calculate::calculatePrice($selection);
-        var_dump($actual);
+        $this->assertEquals($expected,$actual);
 
 
     }
