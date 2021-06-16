@@ -1,0 +1,19 @@
+{
+    "name": "abraham-fernandez/cloudservices",
+    "description": "Prueba de nivel Ingram Micro",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abraham.fernandez",
+            "email": "abraham280596@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3.3"
+    }
+}
