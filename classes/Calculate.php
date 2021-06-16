@@ -7,6 +7,7 @@ class Calculate
     /**
      * Method to get percentage to apply
      * @param int $numServices
+     * @return float|int
      */
     public static function getPercentage(int $numServices)
     {
@@ -18,11 +19,11 @@ class Calculate
     /**
      * Method to calculate price of services
      * @param array $selection
-     * @param int $priceLicense;
+     * @param int $priceLicense ;
+     * @return float|int
      */
     public static function calculatePrice(array $selection,int $priceLicense)
     {
-
 
         $numServices = count($selection);
         $numLicences = array_sum($selection);
@@ -34,7 +35,6 @@ class Calculate
         $total=0;
         foreach ($combinations as $numLicense=>$repetitions){
             $total+=$repetitions*(($numLicense*$priceLicense)*(1-self::getPercentage($numLicense)));
-
         }
 
         return $total;
